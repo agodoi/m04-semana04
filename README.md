@@ -45,16 +45,24 @@ Como os sinais analógicos não são compatíveis diretamente com os bits, é ne
 
 A amostragem consiste em capturar "fotos" do sinal analógico em intervalos regulares de tempo.
 
+![Amostragem](https://github.com/agodoi/m04-semana04/blob/main/imgs/amostragem.png)
+
+
 **Regra de Ouro:**  
 A taxa de amostragem (f<sub>A</sub>) deve ser pelo menos duas vezes maior que a frequência máxima (f<sub>MAX</sub>) do sinal analógico para garantir que o sinal possa ser recuperado sem perda de informações.
-
-![Amostragem](https://github.com/agodoi/m04-semana04/blob/main/imgs/amostragem.png)
 
 ---
 
 ## Quantização
 
 A quantização é o processo de arredondar os valores amostrados para o degrau mais próximo em uma escala discreta, seja no quadrante positivo ou negativo.
+
+
+![Quantização](https://github.com/agodoi/m04-semana04/blob/main/imgs/quantizacao.png)
+
+
+![Quantização](https://github.com/agodoi/m04-semana04/blob/main/imgs/quantizacao2.png)
+
 
 **Regra de Ouro:**  
 - O número de degraus = 2^N Bits
