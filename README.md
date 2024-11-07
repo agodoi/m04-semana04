@@ -109,9 +109,14 @@ Quanto mais tempo o sinal quadrado se manter, maior o brilho da lâmpada. Quanto
 
 ## Prática: Comparando Qualidado Arduino vs ESP32
 
-1. Abra o Arduino IDE;
-2. Cole o código agaixo;
-3. Monte o circuito de exemplo e siga as orientações fornecidas pelo professor.
+1. Abra TinkerCad;
+2. Monte o circuito
+
+![Arduino com Pot](https://github.com/agodoi/m04-semana04/blob/main/imgs/arduino_pot.png)
+
+
+3. Cole o código agaixo;
+4. Monte o circuito de exemplo e siga as orientações fornecidas pelo professor.
 
 ```
 const int analogInPin = A0;  // Analog input pin that the potentiometer is attached to
@@ -142,8 +147,11 @@ void loop() {
 }
 ```
 
-4. Agora abra o Wokwi, montem o mesmo circuito, mas usando o ESP32;
-5. Vamos adatapr o código anterior para os recursos do ESP32;
+5. Agora abra o Wokwi, montem o mesmo circuito, mas usando o ESP32;
+
+![ESP32 com pot](https://github.com/agodoi/m04-semana04/blob/main/imgs/esp_pot.png)
+
+6. Vamos adatapr o código anterior para os recursos do ESP32;
 
 ```
 const int analogInPin = 2;  // Analog input pin that the potentiometer is attached to
