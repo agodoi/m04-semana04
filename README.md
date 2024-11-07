@@ -17,6 +17,12 @@ Conceitos de entradas digitais e analógicas e leitura de valores de sensores an
 
 ### Você sabe qual é o mínimo de sensibilidade do ESP32 ao capturar mudanças de valores dos sensores?
 
+### Qual melhor sensor de vibração para o seu projeto? Acelerômetro ou um Piezoelétrico?
+
+![MPU6050](https://github.com/agodoi/m04-semana04/blob/main/imgs/mpu6050.png)
+![Piezoelétrico](https://github.com/agodoi/m04-semana04/blob/main/imgs/piezoeletrico.png)
+
+
 ### Para responder essas perguntas, vejamos a nossa trilha de hoje:
 
 ## 1. Como digitalizar o sinal analógico
@@ -89,18 +95,28 @@ A codificação converte o valor quantizado em uma sequência binária para arma
 
 ---
 
-## Prática
+## Quais pinos estão envolvidos nesse conceito?
+
+![Pinout ESP32](https://github.com/agodoi/m04-semana04/blob/main/imgs/pinoutESP32.png)
+
+* Onde há pinos nomeados de **DAC** indicam que liberam sinal analógico em degraus, que são os pinos 25 e 26.
+* Onde há pinos nomeados de **ADC** indicam que recebem sinal analógico verdadeiros e convertem para digital, que são 02 04 15 12 13 14 25 26 27 32 33 34 35 36 e 39.
+* Onde há pinos com sinal de til ```~``` indicam que podem emitir sinais equivalentes ao analógico, que são sinais PWM.
+
+![Sinal PWM](https://github.com/agodoi/m04-semana04/blob/main/imgs/pwm.png)
+
+Quanto mais tempo o sinal quadrado se manter, maior o brilho da lâmpada. Quanto menor o tempo o sinal quadrado se manter, menor a tensão média no LED, logo seu brilho se diminui.
+
+## Prática: Comparando Qualidado Arduino vs ESP32
 
 1. Abra o Arduino IDE;
 2. Cole o código agaixo;
 3. Monte o circuito de exemplo e siga as orientações fornecidas pelo professor.
 
 ```
-//Analog input, analog output, serial output
-
 const int analogInPin = A0;  // Analog input pin that the potentiometer is attached to
 const int analogOutPin = 9;  // Analog output pin that the LED is attached to
-int ref = 0, limite = 2000;
+int ref = 0, limite = 1000;
 
 int sensorValue = 0;  // value read from the pot
 int outputValue = 0;  // value output to the PWM (analog out)
@@ -126,18 +142,49 @@ void loop() {
 }
 ```
 
+4. Agora abra o Wokwi, montem o mesmo circuito, mas usando o ESP32;
+5. Vamos adatapr o código anterior para os recursos do ESP32;
+
+```
+const int analogInPin = 2;  // Analog input pin that the potentiometer is attached to
+const int analogOutPin = 25;  // Analog output pin that the LED is attached to
+int ref = 0, limite = 500;
+
+int sensorValue = 0;  // value read from the pot
+int outputValue = 0;  // value output to the PWM (analog out)
+
+void setup() {
+    Serial.begin(9600); //inicializa a comunicação do Monitor Serial
+    pinMode(analogInPin, INPUT);
+    pinMode(analogOutPin, INPUT);
+}
+
+void loop() {
+
+   if(millis() - ref >= limite){
+      ref = millis();
+      sensorValue = analogRead(analogInPin); //lê o pino de forma analógica
+      outputValue = map(sensorValue, 0, 4095, 0, 255); //faz regra de três entre duas faixas de valores
+      analogWrite(analogOutPin, outputValue); //joga o resultado da regra de 3 no pino do LED
+      Serial.print("sensor = ");
+      Serial.print(sensorValue);
+      Serial.print("\t output = ");
+      Serial.println(outputValue);
+   }
+}
+```
+
 ---
 
-## Prática / Desafio
+## Desafio
 
-**Objetivo:** Criar um programa no ESP32 utilizando LDR (sensor de luz), LED e resistor em série.  
+**Objetivo:** Explicar a diferença entre os dois códigos via uma pair teaching
 
-1. **Exercício:**  
-   - Faça um código para o Arduino Uno que controle o brilho do LED com base no nível de luz capturado pelo LDR.
-   - Monte o circuito conforme instruído.
+Cada grupo fará a sua apresentação explicando a diferença de recurso entre Arduino e ESP32 nos itens: ADC e DAC e responder as seguintes perguntas:
 
----
+1) Quantos bits ADC e DAC o Arduino possui?
+2) Quantos bits ADC e DAC o ESP32 possui?
+3) Qual o impacto disso na leitura de um sensor analógico?
+4) E pensando no sensor piezoelétrico para detectar vibração de máquinas, qual o melhor microcontrolador?
 
-Pronto para ser utilizado no GitHub como uma aula prática e teórica! Ajuste conforme necessário para seu estilo de ensino.
-
----
+A melhor explicação ganhará um prêmio!
