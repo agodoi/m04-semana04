@@ -186,7 +186,7 @@ void loop() {
 
 ## Desafio
 
-**Objetivo:** Explicar a diferença entre os dois códigos via uma pair teaching
+**Objetivo:** Explicar a diferença entre os dois códigos via uma **pair teaching**
 
 Cada grupo fará a sua apresentação explicando a diferença de recurso entre Arduino e ESP32 nos itens: ADC e DAC e responder as seguintes perguntas:
 
@@ -196,3 +196,10 @@ Cada grupo fará a sua apresentação explicando a diferença de recurso entre A
 4) E pensando no sensor piezoelétrico para detectar vibração de máquinas, qual o melhor microcontrolador?
 
 A melhor explicação ganhará um prêmio!
+
+Apresentação de 3 minutos.
+
+Todos os grupos apresentam.
+
+
+
