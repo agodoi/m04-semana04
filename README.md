@@ -51,7 +51,7 @@ A amostragem consiste em capturar "fotos" do sinal analógico em intervalos regu
 **Regra de Ouro:**  
 A taxa de amostragem (f<sub>A</sub>) deve ser pelo menos duas vezes maior que a frequência máxima (f<sub>MAX</sub>) do sinal analógico para garantir que o sinal possa ser recuperado sem perda de informações.
 
-(f<sub>A</sub>) >= 2 * (f<sub>MAX</sub>) 
+### f<sub>A</sub> >= 2.f<sub>MAX</sub>
 
 ![Amostragem](https://github.com/agodoi/m04-semana04/blob/main/imgs/amostragem2.png)
 
