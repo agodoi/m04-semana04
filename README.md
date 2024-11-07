@@ -192,8 +192,9 @@ Cada grupo fará a sua apresentação explicando a diferença de recurso entre A
 
 1) Quantos bits ADC e DAC o Arduino possui?
 2) Quantos bits ADC e DAC o ESP32 possui?
-3) Qual o impacto disso na leitura de um sensor analógico?
-4) E pensando no sensor piezoelétrico para detectar vibração de máquinas, qual o melhor microcontrolador?
+3) Existe algum impacto diferente no brilho do LED para cada microcontrolador?
+4) Qual o impacto disso na leitura de um sensor analógico?
+5) E pensando no sensor piezoelétrico para detectar vibração de máquinas, qual o melhor microcontrolador?
 
 A melhor explicação ganhará um prêmio!
 
