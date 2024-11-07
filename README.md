@@ -77,10 +77,13 @@ A quantização é o processo de arredondar os valores amostrados para o degrau 
 
 A codificação converte o valor quantizado em uma sequência binária para armazenamento e processamento em memória digital.
 
+![Amostragem](https://github.com/agodoi/m04-semana04/blob/main/imgs/codificacao.png)
+
 ### Resumo do Processo:
 - **Amostragem:** Captura de amostras (fotos) do sinal analógico para evitar aliasing.
 - **Quantização:** Arredondamento das amostras para o degrau mais próximo.
 - **Codificação:** Conversão dos valores quantizados para uma sequência binária.
+
 
 ---
 
