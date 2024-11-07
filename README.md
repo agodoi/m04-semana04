@@ -17,8 +17,10 @@ Conceitos de entradas digitais e analógicas e leitura de valores de sensores an
 
 ### Você sabe qual é o mínimo de sensibilidade do ESP32 ao capturar mudanças de valores dos sensores?
 
+### Para responder essas perguntas, vejamos a nossa trilha de hoje:
 
 ## 1. Como digitalizar o sinal analógico
+   - Definições
    - Amostragem
    - Quantização
    - Codificação
@@ -29,7 +31,9 @@ Conceitos de entradas digitais e analógicas e leitura de valores de sensores an
 
 ## Por que Digitalizar Sinais?
 
-Os microcontroladores e computadores possuem memórias finitas e padronizadas em bits, enquanto os seres humanos e a natureza utilizam sinais analógicos. Como os sinais analógicos não são compatíveis diretamente com os bits, é necessário digitalizá-los para armazenamento e processamento no mundo digital. Este processo envolve três etapas principais:
+Os microcontroladores e computadores possuem memórias finitas e padronizadas em bits, enquanto os seres humanos e a natureza utilizam sinais analógicos. 
+
+Como os sinais analógicos não são compatíveis diretamente com os bits, é necessário digitalizá-los para armazenamento e processamento no mundo digital. Este processo envolve três etapas principais:
 
 1. **Amostragem**
 2. **Quantização**
@@ -43,6 +47,8 @@ A amostragem consiste em capturar "fotos" do sinal analógico em intervalos regu
 
 **Regra de Ouro:**  
 A taxa de amostragem (f<sub>A</sub>) deve ser pelo menos duas vezes maior que a frequência máxima (f<sub>MAX</sub>) do sinal analógico para garantir que o sinal possa ser recuperado sem perda de informações.
+
+![Amostragem](https://github.com/agodoi/m04-semana04/blob/main/imgs/amostragem.png)
 
 ---
 
