@@ -115,11 +115,11 @@ void loop() {
       ref = millis();
       sensorValue = analogRead(analogInPin); //lê o pino de forma analógica
       outputValue = map(sensorValue, 0, 1023, 0, 255); //faz regra de três entre duas faixas de valores
-     analogWrite(analogOutPin, outputValue); //joga o resultado da regra de 3 no pino do LED
-     Serial.print("sensor = ");
-     Serial.print(sensorValue);
-     Serial.print("\t output = ");
-     Serial.println(outputValue);
+      analogWrite(analogOutPin, outputValue); //joga o resultado da regra de 3 no pino do LED
+      Serial.print("sensor = ");
+      Serial.print(sensorValue);
+      Serial.print("\t output = ");
+      Serial.println(outputValue);
    }
 }
 ```
