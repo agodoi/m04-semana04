@@ -67,7 +67,7 @@ A quantização é o processo de arredondar os valores amostrados para o degrau 
 
 
 **Regra de Ouro:**  
-- O número de degraus = 2^N Bits
+- O número de degraus = (2<sup>N</sup>) Bits
 - Mais bits resultam em mais degraus, menos erro de quantização, mas maior tamanho do arquivo.
 - Menos bits resultam em menos degraus, mais erro por arredondamento, mas menor tamanho do arquivo.
 
