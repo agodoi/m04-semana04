@@ -106,7 +106,9 @@ int sensorValue = 0;  // value read from the pot
 int outputValue = 0;  // value output to the PWM (analog out)
 
 void setup() {
-  Serial.begin(9600); //inicializa a comunicação do Monitor Serial
+	Serial.begin(9600); //inicializa a comunicação do Monitor Serial
+	pinMode(analogInPin, INPUT);
+  	pinMode(analogOutPin, INPUT);
 }
 
 void loop() {
