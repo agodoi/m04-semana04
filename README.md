@@ -73,14 +73,19 @@ Como os sinais analógicos não são compatíveis diretamente com os bits, é ne
 
 A amostragem consiste em capturar "fotos" do sinal analógico em intervalos regulares de tempo.
 
-![Amostragem](imgs/amostragem.png)
+
+<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/amostragem.png" width="300">
+
+
 
 **Regra de Ouro:**
 A taxa de amostragem (f<sub>A</sub>) deve ser pelo menos duas vezes maior que a frequência máxima (f<sub>MAX</sub>) do sinal analógico para garantir que o sinal possa ser recuperado sem perda de informações.
 
 ### f<sub>A</sub> >= 2.f<sub>MAX</sub>
 
-![Amostragem](imgs/amostragem2.png)
+
+<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/amostragem2.png" width="300">
+
 
 ---
 
@@ -88,9 +93,10 @@ A taxa de amostragem (f<sub>A</sub>) deve ser pelo menos duas vezes maior que a 
 
 A quantização é o processo de arredondar os valores amostrados para o degrau mais próximo em uma escala discreta, seja no quadrante positivo ou negativo.
 
-![Quantização](imgs/quantizacao.png)
+<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/quantizacao.png" width="300">
 
-![Quantização](imgs/quantizacao2.png)
+<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/quantizacao2.png" width="300">
+
 
 **Regra de Ouro:**
 - O número de degraus = 2<sup>Nbits</sup>
@@ -107,7 +113,9 @@ No ESP32, o ADC é de 12 bits → 2<sup>12</sup> = **4096 degraus** (valores de 
 
 A codificação converte o valor quantizado em uma sequência binária para armazenamento e processamento em memória digital.
 
-![Codificação](imgs/codificacao.png)
+<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/codificacao.png" width="300">
+
+
 
 ### Resumo do Processo:
 - **Amostragem:** Captura de amostras (fotos) do sinal analógico para evitar aliasing.
@@ -118,13 +126,16 @@ A codificação converte o valor quantizado em uma sequência binária para arma
 
 ## Quais pinos estão envolvidos nesse conceito?
 
-![Pinout ESP32](imgs/pinoutESP32.png)
+<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/pinoutESP32.png" width="300">
+
 
 * Onde há pinos nomeados de **DAC** indicam que liberam sinal analógico em degraus, que são os pinos 25 e 26.
 * Onde há pinos nomeados de **ADC** indicam que recebem sinal analógico verdadeiros e convertem para digital, que são 02 04 15 12 13 14 25 26 27 32 33 34 35 36 e 39.
 * Onde há pinos com sinal de til ```~``` indicam que podem emitir sinais equivalentes ao analógico, que são sinais PWM.
 
-![Sinal PWM](imgs/pwm.png)
+<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/pwm.png" width="300">
+
+
 
 Quanto mais tempo o sinal quadrado se manter, maior o brilho da lâmpada. Quanto menor o tempo o sinal quadrado se manter, menor a tensão média no LED, logo seu brilho se diminui.
 
@@ -139,7 +150,9 @@ Quanto mais tempo o sinal quadrado se manter, maior o brilho da lâmpada. Quanto
 
 ### 3.1 Sensor ultrassônico HC-SR04
 
-![HC-SR04](imgs/hcsr04.png)
+<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/pwm.png" width="300">
+
+<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/ultrasonic.webp" width="300">
 
 O HC-SR04 mede distância por **tempo de voo do som**: ele emite um pulso ultrassônico e mede quanto tempo o eco leva para voltar. Não usa o ADC — o microcontrolador apenas cronometra a largura de um pulso digital.
 
@@ -151,7 +164,8 @@ O HC-SR04 mede distância por **tempo de voo do som**: ele emite um pulso ultras
 
 ### 3.2 Sensor de presença PIR (HC-SR501)
 
-![PIR](imgs/pir.png)
+
+<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/hc-501-frente.png" width="300">
 
 O PIR detecta a radiação infravermelha emitida por corpos quentes em movimento (pessoas, animais). A saída é **digital liga/desliga**: fica em HIGH enquanto há movimento e volta a LOW quando para. Ou seja, carrega **1 único bit** de informação — não há o que quantizar.
 
