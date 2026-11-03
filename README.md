@@ -2,7 +2,7 @@
 
 ## Terças e quintas. Professor de horário parcial. Nesses 2 dias, podem contar comigo!
 
-# Semana 04 - Sensores e Processamento de Valores de Entrada (Analógico e Digital) com ESP32
+## Semana 04 - Sensores e Processamento de Valores de Entrada (Analógico e Digital) com ESP32
 
 Conceitos de entradas digitais e analógicas e leitura de valores de sensores para sensoriamento/monitoramento automatizado usando o ESP32. Os exemplos desta aula são o **LDR** (sensor analógico de luz), o **sensor ultrassônico HC-SR04** (sensor digital de distância por tempo de eco) e o **sensor de presença PIR** (sensor digital com saída liga/desliga). A instrução também tratará de requisitos não funcionais.
 
