@@ -241,7 +241,7 @@ void loop() {
 }
 ```
 
-<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/esp_ldr.png" width="300">
+<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/esp_ldr.png" width="600">
 
 Compare os valores no Monitor Serial: o Arduino chega no máximo a 1023, o ESP32 a 4095. É a quantização em ação — mais bits, degraus mais finos.
 
@@ -280,7 +280,7 @@ void loop() {
   delay(200);
 }
 ```
-<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/esp_hcsr04.png" width="300">
+<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/esp_hcsr04.png" width="600">
 
 
 
@@ -312,7 +312,7 @@ void loop() {
 }
 ```
 
-<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/esp_pir.png" width="300">
+<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/esp_pir.png" width="600">
 
 ---
 
