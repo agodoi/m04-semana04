@@ -280,8 +280,9 @@ void loop() {
   delay(200);
 }
 ```
+<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/esp_hcsr04.png" width="300">
 
-https://github.com/agodoi/m04-semana04/blob/main/imgs/esp_hcsr04.png
+
 
 
 ### 4.3 PIR: detectando presença (Wokwi com ESP32)
@@ -310,7 +311,8 @@ void loop() {
   delay(100);
 }
 ```
-https://github.com/agodoi/m04-semana04/blob/main/imgs/esp_pir.png
+
+<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/esp_pir.png" width="300">
 
 ---
 
