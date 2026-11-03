@@ -19,8 +19,8 @@ Conceitos de entradas digitais e analógicas e leitura de valores de sensores pa
 
 <img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/ldr.png" width="200">
 <img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/hc-501.png" width="200">
-<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/hc-501-frente.png" width="500">
-<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/ultrasonic.webp" width="500">
+<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/hc-501-frente.png" width="200">
+<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/ultrasonic.webp" width="200">
 
 
 
