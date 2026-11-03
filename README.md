@@ -17,8 +17,8 @@ Conceitos de entradas digitais e analógicas e leitura de valores de sensores pa
 - Você sabe qual é o mínimo de sensibilidade do ESP32 ao capturar mudanças de valores do sensor analógico?
 - Para detectar que alguém se aproximou de um equipamento, o que o seu projeto precisa: só saber **se** tem presença (PIR, liga/desliga) ou saber **a que distância** está o objeto (ultrassônico)?
 
-<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/ldr.png" width="400">
-<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/hc-501.png" width="500">
+<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/ldr.png" width="200">
+<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/hc-501.png" width="200">
 <img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/hc-501-frente.png" width="500">
 <img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/ultrasonic.webp" width="500">
 
