@@ -53,7 +53,7 @@ Antes de digitalizar qualquer coisa, precisamos saber **que tipo de sinal** o se
 | **HC-SR04** | Digital (pulso de eco cuja largura é proporcional à distância) | `pulseIn()` medindo tempo | Tempo em microssegundos → distância |
 | **PIR** | Digital liga/desliga | `digitalRead()` | 1 bit: HIGH (movimento) ou LOW (parado) |
 
-Só o LDR passa pelo conversor analógico-digital (ADC). Os outros dois já entregam um sinal digital — por isso o processo de amostragem/quantização/codificação que veremos a seguir se aplica principalmente ao **LDR**.
+Só o LDR passa pelo conversor analógico-digital (ADC). Os outros dois já entregam um sinal digital, por isso o processo de amostragem/quantização/codificação que veremos a seguir se aplica principalmente ao **LDR**.
 
 ---
 
@@ -152,19 +152,19 @@ Quanto mais tempo o sinal quadrado se manter, maior o brilho da lâmpada. Quanto
 
 <img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/ultrasonic.webp" width="300">
 
-O HC-SR04 mede distância por **tempo de voo do som**: ele emite um pulso ultrassônico e mede quanto tempo o eco leva para voltar. Não usa o ADC — o microcontrolador apenas cronometra a largura de um pulso digital.
+O HC-SR04 mede distância por **tempo de voo do som**: ele emite um pulso ultrassônico e mede quanto tempo o eco leva para voltar. Não usa o ADC, o microcontrolador apenas cronometra a largura de um pulso digital.
 
 - Você dá um pulso de 10 µs no pino **Trig**.
 - O sensor devolve, no pino **Echo**, um pulso HIGH cuja **duração** é o tempo de ida e volta do som.
 - Como o som percorre ~343 m/s, cada centímetro de ida e volta leva ≈ 58 µs. Logo: `distância_cm = duração_us / 58`.
 
-> ⚠️ **Requisito não funcional (nível de tensão):** o HC-SR04 trabalha em 5 V e seu pino Echo devolve 5 V. O ESP32 é de 3,3 V. Ligar o Echo direto no ESP32 pode danificar o pino — use um **divisor de tensão** (ex.: 1 kΩ + 2 kΩ) no Echo.
+> ⚠️ **Requisito não funcional (nível de tensão):** o HC-SR04 trabalha em 5 V e seu pino Echo devolve 5 V. O ESP32 é de 3,3 V. Ligar o Echo direto no ESP32 pode danificar o pino, use um **divisor de tensão** (ex.: 1 kΩ + 2 kΩ) no Echo.
 
 ### 3.2 Sensor de presença PIR (HC-SR501)
 
 <img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/hc-501-frente.png" width="300">
 
-O PIR detecta a radiação infravermelha emitida por corpos quentes em movimento (pessoas, animais). A saída é **digital liga/desliga**: fica em HIGH enquanto há movimento e volta a LOW quando para. Ou seja, carrega **1 único bit** de informação — não há o que quantizar.
+O PIR detecta a radiação infravermelha emitida por corpos quentes em movimento (pessoas, animais). A saída é **digital liga/desliga**: fica em HIGH enquanto há movimento e volta a LOW quando para. Ou seja, carrega **1 único bit** de informação, não há o que quantizar.
 
 - Leitura com `digitalRead()`.
 - A maioria das placas HC-SR501 entrega a saída já em 3,3 V, compatível com o ESP32.
@@ -174,7 +174,7 @@ O PIR detecta a radiação infravermelha emitida por corpos quentes em movimento
 
 ## 4. Prática
 
-### 4.1 LDR: comparando a resolução do ADC — Arduino vs ESP32
+### 4.1 LDR: comparando a resolução do ADC Arduino vs ESP32
 
 Aqui vamos ver na prática a diferença de bits do ADC usando o **LDR** como entrada analógica e um **LED** como saída (o brilho acompanha a luz lida).
 
@@ -243,7 +243,7 @@ void loop() {
 
 <img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/esp_ldr.png" width="600">
 
-Compare os valores no Monitor Serial: o Arduino chega no máximo a 1023, o ESP32 a 4095. É a quantização em ação — mais bits, degraus mais finos.
+Compare os valores no Monitor Serial: o Arduino chega no máximo a 1023, o ESP32 a 4095. É a quantização em ação, mais bits, degraus mais finos.
 
 ### 4.2 HC-SR04: medindo distância (Wokwi com ESP32)
 
