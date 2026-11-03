@@ -113,7 +113,7 @@ No ESP32, o ADC é de 12 bits → 2<sup>12</sup> = **4096 degraus** (valores de 
 
 A codificação converte o valor quantizado em uma sequência binária para armazenamento e processamento em memória digital.
 
-<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/codificacao.png" width="300">
+<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/codificacao.png" width="600">
 
 
 
