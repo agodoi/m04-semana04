@@ -74,7 +74,7 @@ Como os sinais analógicos não são compatíveis diretamente com os bits, é ne
 A amostragem consiste em capturar "fotos" do sinal analógico em intervalos regulares de tempo.
 
 
-<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/amostragem.png" width="300">
+<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/amostragem.png" width="400">
 
 
 
@@ -84,7 +84,7 @@ A taxa de amostragem (f<sub>A</sub>) deve ser pelo menos duas vezes maior que a 
 ### f<sub>A</sub> >= 2.f<sub>MAX</sub>
 
 
-<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/amostragem2.png" width="300">
+<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/amostragem2.png" width="400">
 
 
 ---
@@ -93,9 +93,9 @@ A taxa de amostragem (f<sub>A</sub>) deve ser pelo menos duas vezes maior que a 
 
 A quantização é o processo de arredondar os valores amostrados para o degrau mais próximo em uma escala discreta, seja no quadrante positivo ou negativo.
 
-<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/quantizacao.png" width="300">
+<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/quantizacao.png" width="400">
 
-<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/quantizacao2.png" width="300">
+<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/quantizacao2.png" width="400">
 
 
 **Regra de Ouro:**
@@ -126,14 +126,14 @@ A codificação converte o valor quantizado em uma sequência binária para arma
 
 ## Quais pinos estão envolvidos nesse conceito?
 
-<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/pinoutESP32.png" width="300">
+<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/pinoutESP32.png" width="600">
 
 
 * Onde há pinos nomeados de **DAC** indicam que liberam sinal analógico em degraus, que são os pinos 25 e 26.
 * Onde há pinos nomeados de **ADC** indicam que recebem sinal analógico verdadeiros e convertem para digital, que são 02 04 15 12 13 14 25 26 27 32 33 34 35 36 e 39.
 * Onde há pinos com sinal de til ```~``` indicam que podem emitir sinais equivalentes ao analógico, que são sinais PWM.
 
-<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/pwm.png" width="300">
+<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/pwm.png" width="500">
 
 
 
@@ -150,8 +150,6 @@ Quanto mais tempo o sinal quadrado se manter, maior o brilho da lâmpada. Quanto
 
 ### 3.1 Sensor ultrassônico HC-SR04
 
-<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/pwm.png" width="300">
-
 <img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/ultrasonic.webp" width="300">
 
 O HC-SR04 mede distância por **tempo de voo do som**: ele emite um pulso ultrassônico e mede quanto tempo o eco leva para voltar. Não usa o ADC — o microcontrolador apenas cronometra a largura de um pulso digital.
@@ -163,7 +161,6 @@ O HC-SR04 mede distância por **tempo de voo do som**: ele emite um pulso ultras
 > ⚠️ **Requisito não funcional (nível de tensão):** o HC-SR04 trabalha em 5 V e seu pino Echo devolve 5 V. O ESP32 é de 3,3 V. Ligar o Echo direto no ESP32 pode danificar o pino — use um **divisor de tensão** (ex.: 1 kΩ + 2 kΩ) no Echo.
 
 ### 3.2 Sensor de presença PIR (HC-SR501)
-
 
 <img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/hc-501-frente.png" width="300">
 
