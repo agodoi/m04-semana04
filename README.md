@@ -209,7 +209,7 @@ void loop() {
 }
 ```
 
-![Arduino com LDR](imgs/arduino_ldr.png)
+
 
 **b) Agora abra o Wokwi e monte o mesmo circuito com o ESP32**
 
@@ -242,7 +242,7 @@ void loop() {
 }
 ```
 
-![ESP32 com LDR](imgs/esp_ldr.png)
+
 
 Compare os valores no Monitor Serial: o Arduino chega no máximo a 1023, o ESP32 a 4095. É a quantização em ação — mais bits, degraus mais finos.
 
@@ -282,7 +282,7 @@ void loop() {
 }
 ```
 
-![ESP32 com HC-SR04](imgs/esp_hcsr04.png)
+
 
 ### 4.3 PIR: detectando presença (Wokwi com ESP32)
 
@@ -311,7 +311,7 @@ void loop() {
 }
 ```
 
-![ESP32 com PIR](imgs/esp_pir.png)
+
 
 ---
 
