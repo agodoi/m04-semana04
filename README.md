@@ -178,7 +178,7 @@ O PIR detecta a radiação infravermelha emitida por corpos quentes em movimento
 
 Aqui vamos ver na prática a diferença de bits do ADC usando o **LDR** como entrada analógica e um **LED** como saída (o brilho acompanha a luz lida).
 
-**a) Monte no TinkerCad com Arduino**
+**a) Monte no Wokwi com ESP32**
 
 Use o LDR num divisor de tensão (LDR + resistor de 10 kΩ) ligado ao pino A0, e o LED num pino PWM.
 
@@ -208,7 +208,6 @@ void loop() {
   }
 }
 ```
-
 
 
 **b) Agora abra o Wokwi e monte o mesmo circuito com o ESP32**
@@ -242,7 +241,7 @@ void loop() {
 }
 ```
 
-
+<img src="https://github.com/agodoi/m04-semana04/blob/main/imgs/esp_ldr.png" width="300">
 
 Compare os valores no Monitor Serial: o Arduino chega no máximo a 1023, o ESP32 a 4095. É a quantização em ação — mais bits, degraus mais finos.
 
@@ -282,6 +281,7 @@ void loop() {
 }
 ```
 
+https://github.com/agodoi/m04-semana04/blob/main/imgs/esp_hcsr04.png
 
 
 ### 4.3 PIR: detectando presença (Wokwi com ESP32)
@@ -310,8 +310,7 @@ void loop() {
   delay(100);
 }
 ```
-
-
+https://github.com/agodoi/m04-semana04/blob/main/imgs/esp_pir.png
 
 ---
 
